@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List Web App || Using HTML, CSS & JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+</head>
+<style>
+    #task{
+        border: none;
+        outline: none;
+        width: 80%;
+        background-color: transparent;
+    }
+    .inpDiv{
+        border: 2px solid green;
+        height: 60px;
+    }
+    .add{
+        height: 100%;
+    }
+    #todobody{
+        width: 60%;
+    }
+
+
+
+
+    @media (max-width:1024px) {
+        #todobody{
+            width: 90%;
+        }
+    }
+</style>
+<body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div id="load" class="p-5 rounded-3" style="display: none; box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.103);">
+        <h2>Welcome Todo List App</h2>
+        <hr>
+        <span class="d-block p-2 text-center">What is your name?</span>
+        <input class="d-block w-100 p-3 m-2 rounded-pill" type="text" placeholder="Enter your name here..." name="" id="userName">
+        <p id="errorMsg" class="ps-2" style="color: red; display: none;"></p>
+        <button  class="btn btn-lg btn-success w-100 m-2 rounded-3" onclick="show()">Get In</button>
+    </div>
+
+
+ <!-- todo body  -->
+    <div  id="todobody" class="p-5 rounded-3" style="box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.103);">
+        <h1 class="text-center pb-3">Todo List</h1>
+        <div class="d-flex justify-content-between px-2">
+            <span id="displayUser" class="pb-3"></span>
+            <img src="" alt="" id="back">
+        </div>
+    <div class="w-100 rounded-pill inpDiv d-flex justify-content-between">
+        <input type="text" placeholder="Enter a new task" class="p-1 m-2 " id="task" >
+        <button class=" add btn rounded-pill btn-success" onclick="addTask()" id="addTask">Add Task</button>
+    </div>
+    <div class="body" id="body">
+        
+    </div>
+    <!-- <p id="update">You have <span></span> tasks</p> -->
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
