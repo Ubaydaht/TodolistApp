@@ -23,7 +23,8 @@ function show(){
 
 
 let task = document.getElementById("task").value
-const taskList= JSON.parse(localStorage.getItem("ToDos"))
+const taskList=localStorage["ToDos"] ? json.parse(localStorage["ToDos"]) : [];
+
 
 // let found = ""
 let editIndex = null
